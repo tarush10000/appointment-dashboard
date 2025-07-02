@@ -766,35 +766,6 @@ const AppointmentDashboard = () => {
                     </div>
                 )}
 
-                {/* Day Overview */}
-                <div className="card">
-                    <h2 className="section-title">Today's Overview</h2>
-                    <div>
-                        {timeSlots.map((slot) => {
-                            const summary = getSlotSummary(slot);
-                            const slotConfig = SLOT_CONFIG[slot];
-                            return (
-                                <div key={slot} className="overview-item">
-                                    <div className="overview-info">
-                                        <h4>{slot}</h4>
-                                        <div className="slot-subtitle">{slotConfig.name}</div>
-                                        <p>{summary.total}/{slotConfig.max} appointments</p>
-                                    </div>
-                                    <div className="overview-stats">
-                                        <div style={{ fontSize: '14px' }}>
-                                            <span className="pending">{summary.pending} pending</span>
-                                            {summary.pending > 0 && summary.completed > 0 && " • "}
-                                            {summary.completed > 0 && (
-                                                <span className="completed">{summary.completed} done</span>
-                                            )}
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-
                 {/* Add Appointment Modal */}
                 {showAddForm && (
                     <div className="modal-overlay">
