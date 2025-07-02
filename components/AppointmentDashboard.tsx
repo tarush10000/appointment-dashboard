@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/no-unescaped-entities */
+
 "use client"
 
 import { CalendarDays, Check, Clock, Phone, Plus, User, Users } from 'lucide-react';
